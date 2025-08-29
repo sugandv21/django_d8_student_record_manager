@@ -1,0 +1,14 @@
+{% extends "students/layout/base.html" %}
+
+{% block content %}
+<h2>{{ object.name }}</h2>
+<ul class="list-group">
+  <li class="list-group-item"><strong>Roll No:</strong> {{ object.roll_no }}</li>
+  <li class="list-group-item"><strong>Course:</strong> {{ object.course }}</li>
+  <li class="list-group-item"><strong>Age:</strong> {{ object.age }}</li>
+</ul>
+
+<a href="{% url 'student-update' object.pk %}" class="btn btn-primary mt-3">Edit</a>
+<a href="{% url 'student-delete' object.pk %}" class="btn btn-danger mt-3">Delete</a>
+<a href="{% url 'student-list' %}" class="btn btn-secondary mt-3">Back</a>
+{% endblock %}

@@ -21,9 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key")
-DEBUG = "RENDER" not in os.environ
-ALLOWED_HOSTS = ["*"]
 
+DEBUG = True
+
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -122,4 +123,5 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
